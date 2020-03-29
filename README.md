@@ -14,12 +14,11 @@ http://
 ---------------------
   Description:
 ---------------------
-1. Displays the 5 days weather data with the high, low temperature and icon image for the selected city and country.
-2. User has option to click to get the details of each day.
-3. User has option to choose the city to get the weather for.
-4. The buttons and cloud icon will be created in the storybook.
-5. The header will contain the homepage links
-6. The sidebar will be included to list the cities options to retrieve weather data.
+1. Displays the 5 days weather data with the high, low temperature and weather icon.
+2. User has option to click to get the details.
+3. User has option to choose the country and city to get the weather.
+4. The header will contain the homepage links
+5. The sidebar will be populated with the countries and cities.
 
 ---------------------
 Wireframes
