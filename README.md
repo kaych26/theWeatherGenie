@@ -17,18 +17,19 @@ http://
 1. Displays the 5 days weather data with the high, low temperature and icon image for the selected city and country.
 2. User has option to click to get the details of each day.
 3. User has option to choose the city to get the weather for.
-3. The buttons and cloud icon will be created in the storybook.
-4. The header will contain the homepage links
-5. The sidebar will be included to list the cities options to retrieve weather data.
+4. The buttons and cloud icon will be created in the storybook.
+5. The header will contain the homepage links
+6. The sidebar will be included to list the cities options to retrieve weather data.
 
 ---------------------
 Wireframes
 ---------------------
 ![](./P2_wireframe.png)
+
 ---------------------
   API: OpenWeather
 ---------------------
-![Open Weather API](https://openweathermap.org/api)
+https://openweathermap.org/api
 
 ---------------------
   MVP Features
@@ -61,7 +62,10 @@ Wireframes
 ---------------------
   POST MVP:
 ---------------------
-POST MVP: If time allows, I like to do more CSS styling to make the webpage with more professional appearance.
+POST MVP: If time allows, I like to do the following:
+
+1. CSS styling to make the webpage with more professional appearance.
+2. Add counter to track the number of website visiters.
 
 ---------------------
 SWOT Analysis
