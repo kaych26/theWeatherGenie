@@ -24,11 +24,11 @@ http://
 ---------------------
 Wireframes
 ---------------------
-
+![](./P2_wireframe.png)
 ---------------------
   API: OpenWeather
 ---------------------
-![Img Open Weather API](https://openweathermap.org/api)
+![Open Weather API](https://openweathermap.org/api)
 
 ---------------------
   MVP Features
@@ -46,6 +46,7 @@ Wireframes
   - country list
   - city list based on selected country
   - 5 days data
+  - city name title
   - detail weather data
   - footer
 
