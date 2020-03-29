@@ -9,7 +9,7 @@ http://
 ---------------------
  Title:
 ---------------------
-  Weather Data
+  Weather Genie
 
 ---------------------
   Description:
