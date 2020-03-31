@@ -3,11 +3,11 @@ import logo from "./logo.svg";
 import { Route, Link } from "react-router-dom";
 import axios from "axios";
 
-import Footer from "./components/Footer/Footer.js";
-import Header from "./components/Header/Header.js";
-import Main from "./components/Main/Main.js";
-import Sidebar from "./components/Sidebar/Sidebar.js";
-import Ids from "../src/data/Ids_limit.js";
+import Footer from "./components/Footer.js";
+import Header from "./components/Header.js";
+import Main from "./components/Main.js";
+import Sidebar from "./components/Sidebar.js";
+import Ids from "./data/Id_NYC.js";
 
 import "./App.css";
 
@@ -15,14 +15,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Ids: []
+      Ids: [],
+      Id: ""
     };
   }
 
   componentDidMount = async () => {
-
     this.setState({
-      Ids: Ids
+      Ids: Ids,
     });
   };
 
@@ -32,16 +32,10 @@ class App extends Component {
         <Route path="/" render={routerProps => <Header />} />
         <Route path="/" render={routerProps => <Sidebar />} />
 
-        {/* {this.state.Ids.map((id, idx) => (
-          <Link to={`/city/${id.id}`}>
-            <h3>
-              {id.id} {id.name} {id.state} {id.country}
-            </h3>
-          </Link>
-        ))} */}
-
-       
-        <Route path="/" render={routerProps => <Main {...routerProps}/>} />
+        <Route
+          path="/"
+          render={routerProps => <Main {...routerProps} />}
+        />
 
         <Route path="/" render={routerProps => <Footer />} />
       </div>

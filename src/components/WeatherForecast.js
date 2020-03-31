@@ -2,7 +2,19 @@ import React, { Component } from "react";
 import { Route, Link } from "react";
 import axios from "axios";
 
-class WeatherDetail extends Component {
+class WeatherForecast extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     results: [],
+  //     city_name: "",
+  //     local_time: "",
+  //     current_temp: "",
+  //     current_feelsLike: "",
+  //     humidity: "",
+  //     weather_icon: ""
+  //   };
+  // }
   constructor(props) {
     super(props);
     this.state = {
@@ -15,27 +27,43 @@ class WeatherDetail extends Component {
   }
 
   componentDidMount = async () => {
+    // const KEY = "a34416af42ea074efad5ada5656f6164";
     const KEY = "f0722d727f4810c1e22014a286bc361e";
     const nycId = "5128581";
     const unit = "imperial";
+    const zip = "10010";
+    const forecast_days = "5";
+    const hourly = "24";
+
+    // const API = `http://api.weatherstack.com/forecast?access_key=${KEY}&query=New York City&units=${unit}&hourly=3`;
     const API = `https://api.openweathermap.org/data/2.5/forecast?id=${this.state.id}&units=${unit}&appid=${KEY}`;
 
     const resp = await axios(API);
+
+  
+    // this.setState({
+    //   results: resp.data,
+    //   city_name: resp.data.location.name,
+    //   local_time: resp.data.location.localtime,
+    //   current_temp: resp.data.current.temperature,
+    //   current_feelsLike: resp.data.current.feelslike,
+    //   humidity: resp.data.current.humidity,
+    //   weather_icon: resp.data.current.weather_icons[0]
+    // });
 
     this.setState({
       results: resp.data.list,
       weather: resp.data.weather,
       main: resp.data.main
     });
-    console.log(resp);
+    // console.log(resp);
 
     // console.log(`RESULTS:  ${resp}`);
     // debugger;
   };
 
   render() {
-
-    // debugger;
+    
     return (
       <div>
         <h1> I AM IN DETAIL Weather </h1>
@@ -57,10 +85,9 @@ class WeatherDetail extends Component {
               ))}
             </div>
           ))}
-
       </div>
     );
   }
 }
 
-export default WeatherDetail;
+export default WeatherForecast;

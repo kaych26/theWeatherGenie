@@ -2,11 +2,8 @@ import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import axios from "axios";
 
-import Ids from "../../data/Ids_limit.js";
-
-import Weather from "../Weather/Weather.js";
-import Main from "../Main/Main.js";
-import "./Sidebar.css";
+import Ids from "../data/Id_NYC.js";
+import "../styles/Sidebar.css";
 
 class Sidebar extends Component {
   constructor(props) {
