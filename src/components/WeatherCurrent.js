@@ -50,23 +50,28 @@ class WeatherCurrent extends Component {
   render() {
     return (
       <div>
-        {/* <h2 className="current-title"> CURRENT TEMPERARTURE </h2> */}
 
         <div className="current-outerframe">
-          <h3 className="current-city">{this.state.city_name}</h3>
+          <div className="current-city">{this.state.city_name}</div>
 
-          <img className="current-weather-icon" src={this.state.weather_icon} />
-          <div className="current-temp-frame">
+          <div className="current-icontemp">
+            <img
+              className="current-weather-icon"
+              src={this.state.weather_icon}
+            />
             <h3 className="current-temp">{this.state.current_temp}&deg; F</h3>
+          </div>
+
+          <div className="current-temp-frame">
             <h3 className="current-feelsLike">
-              Feels {this.state.current_feelsLike}
+              Feels: {this.state.current_feelsLike}
             </h3>
 
             <h3 className="current-humidity">
-              Precipitation {this.state.precip}
+              Precipitation: {this.state.precip}
             </h3>
-            <h3 className="current-humidity">Humidity {this.state.humidity}</h3>
-            <h3 className="current-humidity">Wind {this.state.wind}</h3>
+            <h3 className="current-humidity">Humidity: {this.state.humidity}</h3>
+            <h3 className="current-humidity">Wind: {this.state.wind}</h3>
           </div>
         </div>
       </div>

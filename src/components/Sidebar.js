@@ -29,17 +29,15 @@ class Sidebar extends Component {
       <div className="sidebar-outerframe">
         <h3 className="sidebar-title">Current Temperature</h3>
 
-        <div className="sidebar-today-frame">
-          <Today name="sidebar-today" date={this.state.date} />
-        </div>
+        <div>
+          <div className="sidebar-today-frame">
+            <Today name="sidebar-today" date={this.state.date} />
+          </div>
 
-        <div className="sidebar-time-frame">
-          <Time name="sidebar-time" time={this.state.time} />
+          <div className="sidebar-time-frame">
+            <Time name="sidebar-time" time={this.state.time} />
+          </div>
         </div>
-
-        {/* <Link to="/">
-          <div className="header_home">Current Temp</div>
-        </Link> */}
 
         <Link to="/">
           <div className="sidebar-current-button">

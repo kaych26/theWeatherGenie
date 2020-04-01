@@ -1,12 +1,16 @@
 .sidebar-outerframe {
-  /* border: 1px solid #808080; */
+  display: grid;
+  grid-template-columns: 140px;
+  grid-template-rows: 50px 80px 100px;
+  height: 500px;
+  background-color: lightgrey;
 }
 
 .sidebar-title {
   font-size: 14px;
-  width: 150px;
+
   text-align: right;
-  padding: 15px 10px 20px 30px;
+  /* padding: 15px 10px 20px 30px; */
 }
 
 .sidebar-city {
@@ -15,15 +19,16 @@
 }
 
 .sidebar-today-frame {
-  padding: 5px 50px;
+  /* padding: 5px 50px; */
   text-align: right;
 }
 .sidebar-time-frame {
-  padding: 3px 50px;
+  padding: 10px 0;
   text-align: right;
 }
 
 .sidebar-button {
-  padding: 40px;
+  /* padding: 40px; */
   margin: 15px;
+  text-align: right;
 }

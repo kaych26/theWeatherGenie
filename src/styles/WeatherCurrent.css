@@ -1,32 +1,52 @@
 .current-outerframe {
   padding: 10px 80px;
-}
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 80px 100px 150px ;
+  height: 300px;
 
-.current-outerframe {
-  padding: 5px 180px 0 0;
-  text-align: center;
-}
-
-.current-title {
-  padding: 50px 50px 20px 60px;
 }
 
 .current-city {
-  color: blue;
-  font-size: 28px;
+  color: #00008b;
+  font-size: 32px;
+  font-weight: bold;
   /* padding: 5px 30px; */
 }
+
+
+.current-icontemp {
+  display: grid;
+  grid-template-columns: 80px 150px;
+  grid-template-rows: 80px;
+  height: 100px;
+}
+.current-weather-icon {
+  
+  /* width: 50px; */
+  /* text-align: right; */
+}
+
 .current-temp-frame {
+  display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: 50px 25px 25px 25px;
+  height: 100px;
+ 
 }
 
 .current-temp {
+  justify-self: start;
   font-size: 50px;
-  color: #000fff
+  color: #000fff;
 }
 .current-feelsLike {
+  font-size: 18px;
 }
 
 .current-humidity {
+  font-size: 18px;
 }
 .current-weather-icon {
+  font-size: 18px;
 }
