@@ -3,18 +3,7 @@ import { Route, Link } from "react";
 import axios from "axios";
 
 class WeatherForecast extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     results: [],
-  //     city_name: "",
-  //     local_time: "",
-  //     current_temp: "",
-  //     current_feelsLike: "",
-  //     humidity: "",
-  //     weather_icon: ""
-  //   };
-  // }
+ 
   constructor(props) {
     super(props);
     this.state = {
@@ -40,39 +29,29 @@ class WeatherForecast extends Component {
 
     const resp = await axios(API);
 
-  
-    // this.setState({
-    //   results: resp.data,
-    //   city_name: resp.data.location.name,
-    //   local_time: resp.data.location.localtime,
-    //   current_temp: resp.data.current.temperature,
-    //   current_feelsLike: resp.data.current.feelslike,
-    //   humidity: resp.data.current.humidity,
-    //   weather_icon: resp.data.current.weather_icons[0]
-    // });
 
     this.setState({
       results: resp.data.list,
       weather: resp.data.weather,
       main: resp.data.main
     });
-    // console.log(resp);
-
-    // console.log(`RESULTS:  ${resp}`);
+  
     // debugger;
   };
 
   render() {
     
     return (
-      <div>
-        <h1> I AM IN DETAIL Weather </h1>
-
+      <div className="weatherForecast-outerframe">
+        {/* <h1> I AM IN DETAIL Weather </h1> */}
         {/* {this.state.results.map((each, idx) => ( */}
+
         {this.state.results
-          .filter(oneTemp => oneTemp.dt_txt.includes(" 15:"))
+          .filter(oneTemp => ( oneTemp.dt_txt.includes(" 15:")))
           .map((each, idx) => (
             <div key={idx}>
+              {/* const day={each.dt_txt}.substr(0,9) */}
+              {/* <h3>Date {each.dt_txt}</h3> */}
               <h3>Date {each.dt_txt}</h3>
               <h3> Temp {each.main.temp}</h3>
               <h3> Lo {each.main.temp_min}</h3>

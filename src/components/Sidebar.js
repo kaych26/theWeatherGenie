@@ -2,14 +2,21 @@ import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import axios from "axios";
 
+import Today from "./Today.js";
+import Time from "./Time.js";
+
 import Ids from "../data/Id_NYC.js";
 import "../styles/Sidebar.css";
+import Button from "./Button.js";
 
 class Sidebar extends Component {
   constructor(props) {
     super(props);
+    const today = new Date().toLocaleString().split(",");
     this.state = {
-      Ids: Ids
+      date: today[0],
+      time: today[1],
+      id: "5128581"
     };
   }
 
@@ -19,18 +26,22 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <div>
-        <h1>SIDE BAR ====</h1>
+      <div className="sidebar-outerframe">
+        <h3 className="sidebar-title">Current Temperature</h3>
 
-        {this.state.Ids.map((id, idx) => (
-         
-          <Link to={`/city/${id.id}`}>
-            <h3>
-              {id.id} {id.name} {id.state} {id.country}
-            </h3>
-          </Link>
-        ))}
+        <div className="sidebar-today-frame">
+          <Today name="sidebar-today" date={this.state.date} />
+        </div>
 
+        <div className="sidebar-time-frame">
+          <Time name="sidebar-time" time={this.state.time} />
+        </div>
+
+        <Link to={`/city/${this.state.id}`}>
+          <div className="sidebar-button">
+            <Button name="button_forecast" label="5 Days Forecast " />
+          </div>
+        </Link>
       </div>
     );
   }

@@ -1,0 +1,16 @@
+
+
+.button_forecast {
+
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #0000ff;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.button_forecast: hover {
+
+
+}

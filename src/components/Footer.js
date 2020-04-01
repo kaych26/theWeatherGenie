@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { storiesOf } from "@storybook/react";
-// import FooterLogo_copyright from "../stories/FooterLogo.stories";
 import FooterLogo from "./FooterLogo.js";
 
+const today = new Date().toLocaleString().split(",");
+const year = today[0].split("/");
+
 const Footer = () => {
-  return <FooterLogo date="2020" />
+  return <FooterLogo name="footer_logo" year={year[2]} />;
 };
 
 export default Footer;

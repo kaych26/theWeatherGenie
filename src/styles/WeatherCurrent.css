@@ -1,0 +1,30 @@
+.current-outerframe {
+  padding: 10px 80px;
+}
+
+.current-outerframe {
+  padding: 5px 180px 0 0;
+  text-align: center;
+}
+
+.current-title {
+  padding: 50px 50px 20px 60px;
+}
+
+.current-city {
+  color: blue;
+  font-size: 28px;
+  /* padding: 5px 30px; */
+}
+.current-temp-frame {
+}
+
+.current-temp {
+}
+.current-feelsLike {
+}
+
+.current-humidity {
+}
+.current-weather-icon {
+}
