@@ -37,6 +37,16 @@ class Sidebar extends Component {
           <Time name="sidebar-time" time={this.state.time} />
         </div>
 
+        {/* <Link to="/">
+          <div className="header_home">Current Temp</div>
+        </Link> */}
+
+        <Link to="/">
+          <div className="sidebar-current-button">
+            <Button name="button_current" label="Current Temp " />
+          </div>
+        </Link>
+
         <Link to={`/city/${this.state.id}`}>
           <div className="sidebar-button">
             <Button name="button_forecast" label="5 Days Forecast " />

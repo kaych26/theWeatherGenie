@@ -5,12 +5,14 @@ import "../styles/Header.css";
 const Header = () => {
   return (
     <header className="header">
-      <nav className="header_nav">
-        <Link to="/">
-          <h2 className="header_home">HOME </h2>
-        </Link>
-      </nav>
-      <h1 className="header_title">WEATHER GENIE</h1>
+      {/* <div className="header_nav"> */}
+        {/* <Link to="/">
+          <div className="header_home">HOME </div>
+        </Link> */}
+      {/* </div> */}
+
+      <div></div>
+      <div className="header_title">WEATHER GENIE</div>
     </header>
   );
 };

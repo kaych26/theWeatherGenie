@@ -1,14 +1,12 @@
 .sidebar-outerframe {
   /* border: 1px solid #808080; */
-
-
 }
 
 .sidebar-title {
-font-size: 14px;
+  font-size: 14px;
   width: 150px;
   text-align: right;
-  padding: 15px 10px 20px 5px;
+  padding: 15px 10px 20px 30px;
 }
 
 .sidebar-city {
@@ -17,17 +15,15 @@ font-size: 14px;
 }
 
 .sidebar-today-frame {
-padding: 5px 50px;
-text-align: right;
-
+  padding: 5px 50px;
+  text-align: right;
 }
 .sidebar-time-frame {
-padding: 3px 50px;
-text-align: right;
-
+  padding: 3px 50px;
+  text-align: right;
 }
 
 .sidebar-button {
-  padding: 20px;
+  padding: 40px;
   margin: 15px;
 }

@@ -44,7 +44,7 @@ class WeatherCurrent extends Component {
       wind: resp.data.current.wind_speed,
       precip: resp.data.current.precip
     });
-    debugger;
+    // debugger;
   };
 
   render() {

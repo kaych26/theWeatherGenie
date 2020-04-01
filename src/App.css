@@ -1,3 +1,20 @@
-* {
+*{
   margin: 0;
+}
+
+.body-frame {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 80px;
+  height: 500px;
+}
+
+.sidebar-frame {
+
+  margin-top: 60px;
+}
+
+.footer-frame {
+
+  text-align: center;
 }

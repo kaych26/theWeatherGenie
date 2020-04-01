@@ -42,9 +42,6 @@ class Main extends Component {
           exact
           render={routerProps => <WeatherCurrent {...routerProps} />}
         />
-        {/* <Link to={`/city/${this.state.id}`}>
-          <Button name="button_forecast" label="5 Days Forecast "/>
-          </Link>  */}
 
         <Route
           path="/city/:id"
