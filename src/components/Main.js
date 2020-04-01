@@ -13,24 +13,24 @@ import "../styles/Main.css";
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      Id: props.match.params.id,
-      id: "5128581",
-      results: [],
-      results_5days: [],
-      weather: [],
-      main: [],
-      unit: "F",
+    // this.state = {
+    //   Id: props.match.params.id,
+    //   id: "5128581",
+    //   results: [],
+    //   results_5days: [],
+    //   weather: [],
+    //   main: [],
+    //   unit: "F",
 
-      daily: {}
-    };
+    //   daily: {}
+    // };
   }
 
-  componentDidMount = async () => {
-    const KEY = "f0722d727f4810c1e22014a286bc361e";
-    const nycId = "5128581";
-    const unit = "imperial";
-  };
+  // componentDidMount = async () => {
+  //   const KEY = "f0722d727f4810c1e22014a286bc361e";
+  //   const nycId = "5128581";
+  //   const unit = "imperial";
+  // };
 
   render() {
     return (
@@ -42,12 +42,13 @@ class Main extends Component {
           exact
           render={routerProps => <WeatherCurrent {...routerProps} />}
         />
-
-        <Route
-          path="/city/:id"
-          exact
-          render={routerProps => <WeatherForecast {...routerProps} />}
-        />
+        <div>
+          <Route
+            path="/city/:id"
+            exact
+            render={routerProps => <WeatherForecast {...routerProps} />}
+          />
+        </div>
       </div>
     );
   }

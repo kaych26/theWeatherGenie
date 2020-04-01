@@ -1,0 +1,37 @@
+.weatherForecast-outerframe {
+  /* background-color: hotpink; */
+  display: grid;
+  grid-template-columns: 110px 110px 110px 110px 110px;
+  grid-template-rows: 500px;
+  /* height: 500px; */
+}
+
+.forecast-frame {
+  margin-top: 230px;
+  display: grid;
+  grid-template-columns: 90px;
+  grid-template-rows: 30px 30px 30px 20px;
+  justify-self: end;
+  /* height: 300px; */
+}
+
+.forecast-date {
+  font-weight: bold;
+  font-size: 16px;
+
+  justify-self: center;
+}
+.forecast-temp {
+  font-size: 15px;
+  justify-self: center;
+}
+.forecast-feelslike {
+  font-size: 12px;
+  justify-self: center;
+}
+.forecast-sky {
+  font-size: 12px;
+  text-align: center;
+  padding: 0;
+  justify-self: center;
+}

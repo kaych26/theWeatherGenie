@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Route, Link } from "react";
 import axios from "axios";
+import "../styles/WeatherForecast.css";
 
 class WeatherForecast extends Component {
- 
   constructor(props) {
     super(props);
     this.state = {
@@ -29,39 +29,40 @@ class WeatherForecast extends Component {
 
     const resp = await axios(API);
 
-
     this.setState({
       results: resp.data.list,
       weather: resp.data.weather,
       main: resp.data.main
     });
-  
+
     // debugger;
   };
 
   render() {
-    
     return (
       <div className="weatherForecast-outerframe">
         {/* <h1> I AM IN DETAIL Weather </h1> */}
         {/* {this.state.results.map((each, idx) => ( */}
 
         {this.state.results
-          .filter(oneTemp => ( oneTemp.dt_txt.includes(" 15:")))
+          .filter(oneTemp => oneTemp.dt_txt.includes(" 00:00"))
           .map((each, idx) => (
-            <div key={idx}>
-              {/* const day={each.dt_txt}.substr(0,9) */}
-              {/* <h3>Date {each.dt_txt}</h3> */}
-              <h3>Date {each.dt_txt}</h3>
-              <h3> Temp {each.main.temp}</h3>
-              <h3> Lo {each.main.temp_min}</h3>
-              <h3> Hi {each.main.temp_max}</h3>
+            <div key={idx} className="forecast-frame">
+              {/* <div className="forecast-frame"> */}
+              <div className="forecast-date">
+                {each.dt_txt.substring(5, 10)}
+              </div>
+              <div className="forecast-temp">{each.main.temp}&deg; F</div>
+              <div className="forecast-feelslike">
+                Feels: {each.main.feels_like}&deg; F
+              </div>
 
               {each.weather.map((sky, idx) => (
                 <div key={idx}>
-                  <h3> Sky {sky.main}</h3>
+                  <div className="forecast-sky"> {sky.main}</div>
                 </div>
               ))}
+              {/* </div> */}
             </div>
           ))}
       </div>
