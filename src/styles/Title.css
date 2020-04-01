@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+.header_title {
+  font-family: 'Luckiest Guy', cursive, sans-serif;
+  font-size: 35px;
+  color: white;
+  padding-top: 20px 30px 0px 0;
+  letter-spacing: 0.1em;
+}

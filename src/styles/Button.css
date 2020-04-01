@@ -1,7 +1,4 @@
-
-
 .button_forecast {
-
   padding: 10px;
   border-radius: 5px;
   background-color: #0000ff;
@@ -10,7 +7,6 @@
   font-size: 13px;
 }
 
-.button_forecast: hover {
-
-
+.button_forecast:hover {
+  border-color: 1px solid #0000ff;
 }

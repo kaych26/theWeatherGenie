@@ -20,6 +20,8 @@
 }
 
 .current-temp {
+  font-size: 50px;
+  color: #000fff
 }
 .current-feelsLike {
 }
