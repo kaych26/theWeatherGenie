@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
 import axios from "axios";
 import "../styles/WeatherCurrent.css";
 
+// WeatherCurrent component will call API and render the current weather data.
 class WeatherCurrent extends Component {
   constructor(props) {
     super(props);
@@ -45,9 +45,6 @@ class WeatherCurrent extends Component {
     }));
   };
 
-  // emp={this.state.current_temp}
-  //             feels={this.state.current_feels}
-  //             img={this.state.current_img}
   render() {
     return (
       <div>

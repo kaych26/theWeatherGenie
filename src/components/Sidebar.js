@@ -1,14 +1,12 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
-import axios from "axios";
-
+import { Link } from "react-router-dom";
 import Today from "./Today.js";
 import Time from "./Time.js";
 
-import Ids from "../data/Id_NYC.js";
 import "../styles/Sidebar.css";
 import Button from "./Button.js";
 
+// Sidebar component is called to set the sidebar.
 class Sidebar extends Component {
   constructor(props) {
     super(props);
@@ -20,14 +18,9 @@ class Sidebar extends Component {
     };
   }
 
-  componentDidMount = async () => {
-    this.setState({});
-  };
-
   render() {
     return (
       <div className="sidebar-outerframe">
-        {/* <h3 className="sidebar-title">Current Temperature</h3> */}
 
         <div className="sidebar-todayPlustime-frame">
           <div className="sidebar-today-frame">
@@ -38,8 +31,6 @@ class Sidebar extends Component {
             <Time name="sidebar-time" time={this.state.time} />
           </div>
         </div>
-
-        {/* <div> */}
 
         <div className="sidebar-button-today">
           <Link to="/">
@@ -52,7 +43,6 @@ class Sidebar extends Component {
             <Button name="button_temp" label="Next 5 Days" />
           </Link>
         </div>
-        {/* </div> */}
       </div>
     );
   }

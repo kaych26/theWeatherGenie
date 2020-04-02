@@ -2,9 +2,8 @@
   padding: 10px 0 0 80px;
   display: grid;
   grid-template-columns: 300px;
-  grid-template-rows: 110px 120px 150px ;
+  grid-template-rows: 110px 120px 150px;
   height: 300px;
-
 }
 
 .current-city {
@@ -12,9 +11,7 @@
   font-size: 32px;
   font-weight: bold;
   padding: 15px 0;
-  /* padding: 5px 30px; */
 }
-
 
 .current-icontemp {
   display: grid;
@@ -22,18 +19,12 @@
   grid-template-rows: 80px;
   height: 100px;
 }
-.current-weather-icon {
-  
-  /* width: 50px; */
-  /* text-align: right; */
-}
 
 .current-temp-frame {
   display: grid;
   grid-template-columns: 200px;
   grid-template-rows: 50px 25px 25px 25px;
   height: 100px;
- 
 }
 
 .current-temp {
@@ -51,22 +42,27 @@
 .current-weather-icon {
   font-size: 18px;
 }
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .current-city {
+    font-size: 28px;
+  }
 
+  .current-temp {
+    font-size: 38px;
+  }
+}
 
 /* ----------- iPhone X ----------- */
-/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) { */
-  @media only screen and (min-device-width: 375px) and (max-device-width: 375px) 
-{
+@media only screen and (min-device-width: 375px) and (max-device-width: 375px) {
   .current-outerframe {
     padding: 0;
     display: grid;
     grid-template-columns: 250px;
-    grid-template-rows: 110px 120px 200px ;
+    grid-template-rows: 110px 120px 200px;
     height: 360px;
 
     /* background-color: red; */
-   
-  
   }
-
 }

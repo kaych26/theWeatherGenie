@@ -1,50 +1,33 @@
-import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
-import axios from "axios";
-
+import React from "react";
+import { Route } from "react-router-dom";
 import WeatherCurrent from "./WeatherCurrent.js";
 import WeatherForecast from "./WeatherForecast.js";
-
 import "../styles/Main.css";
 
-class Main extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     currentResult: []
-  //   };
-  // }
+// Main() is used to route the homepage and the 
+// weather 5 days forcast page.
 
-  componentDidMount = async () => {
-    // const KEY = "a34416af42ea074efad5ada5656f6164";
-    // const nycId = "5128581";
-    // const unit = "f";
-    // const API = `http://api.weatherstack.com/current?access_key=${KEY}&query=10010&units=${unit}`;
-    // const resp = await axios(API);
-    // debugger;
-    // this.setState({
-    //   currentResults: resp.data
-    // });
-  };
+function Main() {
+  return (
+    <div className="main-weathercurrent-outerframe">
 
-  render() {
-    return (
-      <div className="main-weathercurrent-outerframe">
+      {/* Homepage: WeatherCurrent component */}
+      <Route
+        path="/"
+        exact
+        render={routerProps => <WeatherCurrent {...routerProps} />}
+      />
+
+      {/* 5 Days forecast: WeatherForecast component */}
+      <div className="main-weatherforecast-outerframe">
         <Route
-          path="/"
           exact
-          render={routerProps => <WeatherCurrent {...routerProps} />}
+          path="/city/:id"
+          exact
+          render={routerProps => <WeatherForecast {...routerProps} />}
         />
-        <div className="main-weatherforecast-outerframe">
-          <Route
-            exact
-            path="/city/:id"
-            exact
-            render={routerProps => <WeatherForecast {...routerProps} />}
-          />
-        </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 export default Main;

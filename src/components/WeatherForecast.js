@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import { Route, Link } from "react";
 import axios from "axios";
 import "../styles/WeatherForecast.css";
 
+// WeatherForecast will call API and render the 5 days weather data.
 class WeatherForecast extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: props.match.params.id,
       current_results: [],
       current_city: "",
       current_temp: "",
@@ -15,24 +14,19 @@ class WeatherForecast extends Component {
       results: [],
       weather: [],
       main: [],
-      unit: "F"
     };
   }
   componentDidMount = async () => {
-    // const KEY = "a34416af42ea074efad5ada5656f6164";
     const KEY = "f0722d727f4810c1e22014a286bc361e";
     const nycId = "5128581";
     const unit = "imperial";
     const zip = "10010";
-    const forecast_days = "5";
-    const hourly = "24";
 
     const KEY_weatherstack = "a34416af42ea074efad5ada5656f6164";
-
     const unit_weatherstack = "f";
 
-    const API_current = `http://api.weatherstack.com/current?access_key=${KEY_weatherstack}&query=10010&units=${unit_weatherstack}`;
-    const API = `https://api.openweathermap.org/data/2.5/forecast?id=${this.state.id}&units=${unit}&appid=${KEY}`;
+    const API_current = `http://api.weatherstack.com/current?access_key=${KEY_weatherstack}&query=${zip}&units=${unit_weatherstack}`;
+    const API = `https://api.openweathermap.org/data/2.5/forecast?id=${nycId}&units=${unit}&appid=${KEY}`;
 
     const resp_current = await axios(API_current);
     const resp = await axios(API);
@@ -42,14 +36,11 @@ class WeatherForecast extends Component {
       weather: resp.data.weather,
       main: resp.data.main,
       current_results: resp_current.data,
-
       current_city: resp_current.data.location.name,
       current_temp: resp_current.data.current.temperature,
       current_feelsLike: resp_current.data.current.feelslike,
       current_img: resp_current.data.current.weather_icons[0]
     });
-
-    // debugger;
   };
   render() {
     return (
@@ -97,7 +88,5 @@ class WeatherForecast extends Component {
     );
   }
 }
-
-
 
 export default WeatherForecast;
