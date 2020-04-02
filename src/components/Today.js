@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Today.css";
 
+// creating label with today's date only
 const date = new Date().toLocaleString().split(",");
 const today = date[0];
 

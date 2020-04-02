@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import { Route, Link } from "react-router-dom";
 
 import Footer from "./components/Footer.js";
 import Header from "./components/Header.js";

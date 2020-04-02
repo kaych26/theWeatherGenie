@@ -42,6 +42,7 @@
 .current-weather-icon {
   font-size: 18px;
 }
+
 /* ----------- iPad 1, 2, Mini and Air ----------- */
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -62,7 +63,5 @@
     grid-template-columns: 250px;
     grid-template-rows: 110px 120px 200px;
     height: 360px;
-
-    /* background-color: red; */
   }
 }

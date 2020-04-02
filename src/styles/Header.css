@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 
 .header {
-  background-color: blue;
+  background-color: #226ba3;
   height: 80px;
   display: grid;
   align-content: center;
   justify-content: center;
   width: auto;
-
 }
 
 a {
@@ -19,25 +18,13 @@ a {
   font-size: 20px;
   font-weight: bold;
   padding: 10px 30px;
-
 }
-/* .header_title {
-  font-family: 'Luckiest Guy', cursive, sans-serif;
-  font-size: 35px;
-  color: white;
-  padding-top: 20px 30px 0px 0;
-  letter-spacing: 0.1em;
- 
-} */
 
 /* ----------- iPhone X ----------- */
 /* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) { */
   @media only screen and (min-device-width: 375px) and (max-device-width: 375px) 
 {
-
   .header_title {
-
     font-size: 24px;
   }
-
 }

@@ -2,18 +2,16 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Today from "./Today.js";
 import Time from "./Time.js";
+import Button from "./Button.js";
 
 import "../styles/Sidebar.css";
-import Button from "./Button.js";
 
 // Sidebar component is called to set the sidebar.
 class Sidebar extends Component {
   constructor(props) {
     super(props);
-    const today = new Date().toLocaleString().split(",");
+   
     this.state = {
-      date: today[0],
-      time: today[1],
       id: "5128581"
     };
   }
@@ -21,15 +19,14 @@ class Sidebar extends Component {
   render() {
     return (
       <div className="sidebar-outerframe">
-
         <div className="sidebar-todayPlustime-frame">
           <div className="sidebar-today-frame">
-            <Today name="sidebar-today" date={this.state.date} />
+            <Today name="sidebar-today"/>
           </div>
 
           <div className="sidebar-time-frame">
-            {/* <Time name="sidebar-time" time={this.state.time} /> */}
-            <Time name="sidebar-time" />
+    
+            <Time name="sidebar-time"/>
           </div>
         </div>
 

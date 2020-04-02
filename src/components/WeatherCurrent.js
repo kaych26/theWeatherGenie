@@ -23,9 +23,9 @@ class WeatherCurrent extends Component {
   }
 
   componentDidMount = async () => {
-    // const KEY = "a34416af42ea074efad5ada5656f6164";
+    
+    // Parameters used to call the Weatherstack API - today's weather
     const KEY = "1d5857743783fad0dbc744550e4f26df";
-    const nycId = "5128581";
     const unit = "f";
 
     const API = `http://api.weatherstack.com/current?access_key=${KEY}&query=10010&units=${unit}`;

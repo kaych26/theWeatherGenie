@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import FooterLogo from "./FooterLogo.js";
 import "../styles/Footer.css";
 
-const today = new Date().toLocaleString().split(",");
-const year = today[0].split("/");
+// const today = new Date().toLocaleString().split(",");
+// const year = today[0].split("/");
 
 const Footer = () => {
   return (
     <div className="footer-frame">
-      <FooterLogo name="footer_logo" year={year[2]} />
+      <FooterLogo name="footer_logo"/>
     </div>
   )
 }
