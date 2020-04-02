@@ -22,7 +22,8 @@ class WeatherForecast extends Component {
     const unit = "imperial";
     const zip = "10010";
 
-    const KEY_weatherstack = "a34416af42ea074efad5ada5656f6164";
+    // const KEY_weatherstack = "a34416af42ea074efad5ada5656f6164";
+    const KEY_weatherstack = "1d5857743783fad0dbc744550e4f26df";
     const unit_weatherstack = "f";
 
     const API_current = `http://api.weatherstack.com/current?access_key=${KEY_weatherstack}&query=${zip}&units=${unit_weatherstack}`;
