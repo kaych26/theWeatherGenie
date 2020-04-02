@@ -40,7 +40,6 @@
   grid-template-rows: 30px 30px 30px 20px;
   place-self: center;
 
-  /* background-color: pink; */
 }
 
 .forecast-date {
@@ -65,4 +64,28 @@
   text-align: center;
   padding: 0;
   place-self: center;
+}
+
+/* ----------- iPhone X ----------- */
+  @media only screen and (min-device-width: 375px) and (max-device-width: 375px) 
+{
+  .weatherForecast-current-frame {
+    padding: 10px 80px;
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 80px 100px;
+    /* height: 300px; */
+  }
+
+  .weatherForecast-outerframe {
+    display: grid;
+    grid-template-columns: 75px 75px 75px 75px 75px;
+    grid-template-rows: 200px;
+  }
+
+  .forecast-feelslike {
+    font-size: 10px;
+    place-self: center;
+  }
+
 }
