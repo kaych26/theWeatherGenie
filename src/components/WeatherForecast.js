@@ -18,7 +18,6 @@ class WeatherForecast extends Component {
       unit: "F"
     };
   }
-
   componentDidMount = async () => {
     // const KEY = "a34416af42ea074efad5ada5656f6164";
     const KEY = "f0722d727f4810c1e22014a286bc361e";
@@ -52,7 +51,6 @@ class WeatherForecast extends Component {
 
     // debugger;
   };
-
   render() {
     return (
       <div>
@@ -99,5 +97,7 @@ class WeatherForecast extends Component {
     );
   }
 }
+
+
 
 export default WeatherForecast;

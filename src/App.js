@@ -9,6 +9,7 @@ import Sidebar from "./components/Sidebar.js";
 
 import "./App.css";
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -16,20 +17,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="whole-frame">
+      <div className="app-whole-frame">
         <Route path="/" render={routerProps => <Header />} />
 
-        <div className="body-frame">
+        <div className="app-body-frame">
           <div className="sidebar-frame">
             <Route path="/" render={routerProps => <Sidebar />} />
           </div>
 
-          <div className="main-frame">
+          <div className="app-main-frame">
             <Route path="/" render={routerProps => <Main {...routerProps} />} />
           </div>
         </div>
 
-        <div className="footer-frame">
+        <div className="app-footer-frame">
           <Route path="/" render={routerProps => <Footer />} />
         </div>
       </div>

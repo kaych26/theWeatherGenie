@@ -39,17 +39,20 @@ class Sidebar extends Component {
           </div>
         </div>
 
+        <div>
+
         <Link to="/">
-          <div className="sidebar-current-button">
-            <Button name="button_current" label="Current Temp " />
+          <div className="sidebar-button-today">
+            <Button name="button_temp" label="Today" />
           </div>
         </Link>
 
         <Link to={`/city/${this.state.id}`}>
           <div className="sidebar-button">
-            <Button name="button_forecast" label="5 Days Forecast " />
+            <Button name="button_temp" label="5 Days Forecast " />
           </div>
         </Link>
+        </div>
       </div>
     );
   }

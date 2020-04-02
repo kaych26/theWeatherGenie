@@ -2,20 +2,22 @@
   margin: 0;
 }
 
-.body-frame {
+.app-body-frame {
   display: grid;
   grid-template-columns: 160px 4fr;
   grid-template-rows: 80px;
   height: 500px;
 }
 
-.sidebar-frame {
+.app-sidebar-frame {
 
   /* margin-top: 60px; */
 }
 
-.footer-frame {
+.app-footer-frame {
 background-color: blue;
   text-align: center;
   color: white;
+  height: 30px;
+  padding-top: 10px;
 }

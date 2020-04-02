@@ -6,8 +6,8 @@
   display: grid;
   align-content: center;
   justify-content: center;
-  
-  /* grid-template-rows: 80px; */
+  width: auto;
+
 }
 
 a {

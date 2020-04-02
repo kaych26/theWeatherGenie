@@ -63,15 +63,15 @@ class WeatherCurrent extends Component {
 
           <div className="current-temp-frame">
             <h3 className="current-feelsLike">
-              Feels like: {this.state.current_feelsLike}
+              Feels like: {this.state.current_feelsLike} &deg; F
             </h3>
             <h3 className="current-humidity">
-              Precipitation: {this.state.precip}
+              Precipitation: {this.state.precip} %
             </h3>
             <h3 className="current-humidity">
-              Humidity: {this.state.humidity}
+              Humidity: {this.state.humidity} %
             </h3>
-            <h3 className="current-humidity">Wind: {this.state.wind}</h3>
+            <h3 className="current-humidity">Wind: {this.state.wind} mph</h3>
             <h3 className="current-desc">Sky: {this.state.weather_desc}</h3>
           </div>
         </div>

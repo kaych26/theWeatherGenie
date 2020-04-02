@@ -1,8 +1,8 @@
 .current-outerframe {
-  padding: 10px 80px;
+  padding: 10px 0 0 80px;
   display: grid;
   grid-template-columns: 300px;
-  grid-template-rows: 80px 100px 150px ;
+  grid-template-rows: 110px 120px 150px ;
   height: 300px;
 
 }
@@ -11,6 +11,7 @@
   color: #00008b;
   font-size: 32px;
   font-weight: bold;
+  padding: 15px 0;
   /* padding: 5px 30px; */
 }
 
@@ -37,7 +38,7 @@
 
 .current-temp {
   justify-self: start;
-  font-size: 50px;
+  font-size: 56px;
   color: #000fff;
 }
 .current-feelsLike {
