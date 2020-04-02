@@ -26,9 +26,13 @@ Wireframes
 ![](./P2_wireframe.png)
 
 ---------------------
-  API: OpenWeather
+  API: OpenWeather.org & Weatherstack.com
 ---------------------
-https://openweathermap.org/api
+TODAY's weather:
+http://api.weatherstack.com/current?access_key=${KEY_weatherstack}&query=${zip}&units=${unit_weatherstack}`
+
+5 Days Forecast Weathers:
+https://api.openweathermap.org/data/2.5/forecast?id=${nycId}&units=${unit}&appid=${KEY}`
 
 ---------------------
   MVP Features
@@ -37,24 +41,28 @@ https://openweathermap.org/api
 
 2. Building the APP in REACT which includes axios API call, React DOM manipulation and class react components using link and route.
 
-3. Mapping the city weather using provided city Id json file to call the weather API.
+3. Mapping the city weather using provided city Id json file to call the weather API. Update 4/1: unable to load the city id json file, server kept freezing up when trying to load the file. Changed to only using the NYC id to call OpenWeathermap API to get 5 days forecast.
 
-4. City Id data and API returned data will be stored in class state 
+4. Incoporated the second API (weatherstack.com) to get current days data with more details.
 
 5. Six or more rendered components 
-  - Header 
-  - country list
-  - city list based on selected country
-  - 5 days data
-  - city name title
-  - detail weather data
-  - footer
+  a. Component Header: renders the heading
+  b. Component Sidebar: renders the side menu; future menu option should include city selections.
+  c. Component Main:  orgainize the route for homepage and other pages
+  d. Component WeatherCurrent: calls API and render today's weather detail
+  e. Component WeatherForecast: calls API and render today's plus next 5 days weather.
+  f. Component Footer: renders the app copyright footer using the storybook lib.
 
-6. Storybook - 5 or more components.
+6. Storybook - 5 or more components
+  a. Button: used to created the 2 buttons on the sidebar
+  b. FooterLogo: customized copyright footer for this project and future use.
+  c. Today: dynamically creates the label with today's date
+  d. Time: dynamically creates the label with time
+  e. Title: dynamiclally creates label name
 
-7. Styling:  using the flex for header links and grid for the main styling.
+7. Styling: primarily used grid to orgainize data layout. 
 
-8. Implement responsive design for desktop, ipad and iphone X
+8. Incorporated responsive design for desktop, ipad and iphone X
 
 9. Final project will be deployed to Surge or Netlify.
 
@@ -71,7 +79,7 @@ SWOT Analysis
 ---------------------
 After connecting the API and retrieving the data, I am comfortable that this is a stable API and able to use the data. I amy encounter issues doing the following:
 
- - Creating the storybook component and using it in the react app. If running into issue, I will try to use google and online videos.
+ - Creating the storybook component and using it in the react app. If running into issue, will try to use google and online videos.
 
  - I will take this opportunity to get more familiar with grid styling for the detail page with the sidebar layout.
 

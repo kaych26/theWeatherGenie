@@ -28,7 +28,8 @@ class Sidebar extends Component {
           </div>
 
           <div className="sidebar-time-frame">
-            <Time name="sidebar-time" time={this.state.time} />
+            {/* <Time name="sidebar-time" time={this.state.time} /> */}
+            <Time name="sidebar-time" />
           </div>
         </div>
 
