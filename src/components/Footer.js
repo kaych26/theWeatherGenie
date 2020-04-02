@@ -6,7 +6,11 @@ const today = new Date().toLocaleString().split(",");
 const year = today[0].split("/");
 
 const Footer = () => {
-  return <FooterLogo name="footer_logo" year={year[2]}/>;
-};
+  return (
+    <div className="footer-frame">
+      <FooterLogo name="footer_logo" year={year[2]} />
+    </div>
+  )
+}
 
 export default Footer;

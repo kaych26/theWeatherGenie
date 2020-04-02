@@ -29,7 +29,7 @@ class Sidebar extends Component {
       <div className="sidebar-outerframe">
         {/* <h3 className="sidebar-title">Current Temperature</h3> */}
 
-        <div>
+        <div className="sidebar-todayPlustime-frame">
           <div className="sidebar-today-frame">
             <Today name="sidebar-today" date={this.state.date} />
           </div>
@@ -39,20 +39,20 @@ class Sidebar extends Component {
           </div>
         </div>
 
-        <div>
+        {/* <div> */}
 
-        <Link to="/">
-          <div className="sidebar-button-today">
+        <div className="sidebar-button-today">
+          <Link to="/">
             <Button name="button_temp" label="Today" />
-          </div>
-        </Link>
-
-        <Link to={`/city/${this.state.id}`}>
-          <div className="sidebar-button">
-            <Button name="button_temp" label="5 Days Forecast " />
-          </div>
-        </Link>
+          </Link>
         </div>
+
+        <div className="sidebar-button">
+          <Link to={`/city/${this.state.id}`}>
+            <Button name="button_temp" label="Next 5 Days" />
+          </Link>
+        </div>
+        {/* </div> */}
       </div>
     );
   }

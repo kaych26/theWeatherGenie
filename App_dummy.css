@@ -9,13 +9,21 @@
 }
 
 .sidebar-frame {
-
   margin-top: 60px;
 }
 
 .footer-frame {
-
   text-align: center;
+}
+
+/* ----------- iPhone X ----------- */
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) { */
+  @media only screen and (min-device-width: 375px) and (max-device-width: 375px) {
+  .body-frame {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* height: 500px; */
+  }
 }
 /*
 

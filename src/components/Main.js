@@ -25,19 +25,19 @@ class Main extends Component {
     // this.setState({
     //   currentResults: resp.data
     // });
-    
   };
 
   render() {
-  
     return (
-      <div>
+      <div className="main-weathercurrent-outerframe">
         <Route
-          path="/" exact
+          path="/"
+          exact
           render={routerProps => <WeatherCurrent {...routerProps} />}
         />
-        <div>
-          <Route exact
+        <div className="main-weatherforecast-outerframe">
+          <Route
+            exact
             path="/city/:id"
             exact
             render={routerProps => <WeatherForecast {...routerProps} />}

@@ -1,23 +1,43 @@
 *{
   margin: 0;
+
 }
 
 .app-body-frame {
   display: grid;
   grid-template-columns: 160px 4fr;
-  grid-template-rows: 80px;
-  height: 500px;
+  grid-template-rows: auto;
+  
+  /* height: 500px; */
 }
 
 .app-sidebar-frame {
-
+height: auto;
   /* margin-top: 60px; */
 }
 
 .app-footer-frame {
-background-color: blue;
-  text-align: center;
-  color: white;
-  height: 30px;
-  padding-top: 10px;
+
+}
+/* ----------- iPhone X ----------- */
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) { */
+  @media only screen and (min-device-width: 375px) and (max-device-width: 375px) 
+{
+
+
+  .app-body-frame {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 300px;
+    
+    height: 500px;
+  }
+
+  .app-main-frame {
+    place-self: center;
+  
+
+  }
+
 }

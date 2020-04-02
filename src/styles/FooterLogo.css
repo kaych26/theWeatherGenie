@@ -1,5 +1,11 @@
 .footer_logo {
-  /* font-weight: bold; */
-  /* height: 20px;
-  text-align: center; */
+  background-color: #000000;
+    height: 25px;
+    bottom: 0;
+    width: 100%;
+    height: 1.6rem;
+    text-align: center;
+    position: absolute;
+    color: white;
+    padding-top: 5px;
 }

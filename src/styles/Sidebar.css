@@ -1,8 +1,10 @@
 .sidebar-outerframe {
   display: grid;
   grid-template-columns: 140px;
-  grid-template-rows: 250px 150px;
-  height: 500px;
+  grid-template-rows: 250px 40px 40px auto;
+  /* height: 90%; */
+  /* height: auto; */
+  height: 90vh;
   background-color: lightgrey;
 }
 
@@ -35,8 +37,41 @@
 
 
 /* ----------- iPhone X ----------- */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) { */
+@media only screen and (min-device-width: 375px) and (max-device-width: 375px) {
+  .sidebar-outerframe {
+    display: grid;
+    grid-template-columns: 110px 130px 130px;
+    grid-template-rows: 60px;
+    height: 0px;
+    background-color: lightgrey;
+  }
+  .sidebar-todayPlustime-frame {
 
+    place-self: center;
+  }
+  
+  .sidebar-button {
+
+    place-self: center;
+  }
+  
+  .sidebar-button-today {
+  
+    place-self: center;
+  }
+
+  .sidebar-today-frame {
+    padding-top: 3px;
+    text-align: right;
+    font-size: 12px;
+
+  }
+  .sidebar-time-frame {
+    padding: 5px 0;
+    text-align: right;
+    font-size: 12px;
+  }
 
 }
 
