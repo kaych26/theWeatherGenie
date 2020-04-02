@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link } from "react";
+import { Route, Link } from "react-router-dom";
 import axios from "axios";
 import "../styles/WeatherCurrent.css";
 
@@ -7,6 +7,7 @@ class WeatherCurrent extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      homepage: props.homepage,
       results: [],
       city_name: "",
       local_time: "",
@@ -22,16 +23,14 @@ class WeatherCurrent extends Component {
   }
 
   componentDidMount = async () => {
-    // const KEY = "f0722d727f4810c1e22014a286bc361e";
     const KEY = "a34416af42ea074efad5ada5656f6164";
     const nycId = "5128581";
     const unit = "f";
 
     const API = `http://api.weatherstack.com/current?access_key=${KEY}&query=10010&units=${unit}`;
-    // const API = `https://api.openweathermap.org/data/2.5/weather?id=${this.state.id}&units=${unit}&appid=${KEY}`;
     const resp = await axios(API);
 
-    this.setState({
+    this.setState(() => ({
       results: resp.data,
       city_name: resp.data.location.name,
       local_time: resp.data.location.localtime,
@@ -43,17 +42,17 @@ class WeatherCurrent extends Component {
       is_day: resp.data.current.is_day,
       wind: resp.data.current.wind_speed,
       precip: resp.data.current.precip
-    });
-    // debugger;
+    }));
   };
 
+  // emp={this.state.current_temp}
+  //             feels={this.state.current_feels}
+  //             img={this.state.current_img}
   render() {
     return (
       <div>
-
         <div className="current-outerframe">
           <div className="current-city">{this.state.city_name}</div>
-
           <div className="current-icontemp">
             <img
               className="current-weather-icon"
@@ -64,14 +63,16 @@ class WeatherCurrent extends Component {
 
           <div className="current-temp-frame">
             <h3 className="current-feelsLike">
-              Feels: {this.state.current_feelsLike}
+              Feels like: {this.state.current_feelsLike}
             </h3>
-
             <h3 className="current-humidity">
               Precipitation: {this.state.precip}
             </h3>
-            <h3 className="current-humidity">Humidity: {this.state.humidity}</h3>
+            <h3 className="current-humidity">
+              Humidity: {this.state.humidity}
+            </h3>
             <h3 className="current-humidity">Wind: {this.state.wind}</h3>
+            <h3 className="current-desc">Sky: {this.state.weather_desc}</h3>
           </div>
         </div>
       </div>

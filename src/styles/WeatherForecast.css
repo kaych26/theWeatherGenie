@@ -1,29 +1,59 @@
+.weatherForecast-current-frame {
+  padding: 10px 80px;
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 80px 100px;
+  /* height: 300px; */
+}
+
+.weatherForecast-icontemp {
+  display: grid;
+  grid-template-columns: 80px 150px;
+  grid-template-rows: 80px;
+  height: 100px;
+}
+
+.weatherForecast-current-temp {
+  font-size: 50px;
+  color: #000fff;
+  font-weight: bold;
+}
+
+.weatherForecast-city {
+  color: #00008b;
+  font-size: 32px;
+  font-weight: bold;
+  /* padding: 5px 30px; */
+}
+
 .weatherForecast-outerframe {
   /* background-color: hotpink; */
   display: grid;
   grid-template-columns: 110px 110px 110px 110px 110px;
-  grid-template-rows: 500px;
-  /* height: 500px; */
+  grid-template-rows: 200px;
+  
 }
 
 .forecast-frame {
-  margin-top: 230px;
   display: grid;
   grid-template-columns: 90px;
   grid-template-rows: 30px 30px 30px 20px;
   justify-self: end;
-  /* height: 300px; */
+  align-self: start;
+  /* background-color: pink; */
 }
 
 .forecast-date {
   font-weight: bold;
   font-size: 16px;
-
   justify-self: center;
+  color: black;
+  /* background-color: lightblue; */
 }
 .forecast-temp {
-  font-size: 15px;
+  font-size: 16px;
   justify-self: center;
+  font-weight: bold;
 }
 .forecast-feelslike {
   font-size: 12px;

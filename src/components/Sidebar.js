@@ -27,7 +27,7 @@ class Sidebar extends Component {
   render() {
     return (
       <div className="sidebar-outerframe">
-        <h3 className="sidebar-title">Current Temperature</h3>
+        {/* <h3 className="sidebar-title">Current Temperature</h3> */}
 
         <div>
           <div className="sidebar-today-frame">
