@@ -10,6 +10,8 @@ class WeatherForecast extends Component {
       current_results: [],
       current_city: "",
       current_temp: "",
+      current_path: "https://www.weatherbit.io/static/img/icons/",
+    
       current_img: "",
       results: [],
       weather: [],
@@ -33,6 +35,8 @@ class WeatherForecast extends Component {
     const API_current = `https://api.weatherbit.io/v2.0/current?city=New York,NY&units=I&key=135c1b8ccc544d6f953f021df2c4b756`;
     const resp_current = await axios(API_current);
 
+    const image = this.state.current_path + resp_current.data.data[0].weather.icon + ".png";
+
     // storing the API result data to this.state
     this.setState({
       results: resp.data.list,
@@ -42,12 +46,10 @@ class WeatherForecast extends Component {
       current_city: resp_current.data.data[0].city_name,
       current_temp: resp_current.data.data[0].temp,
       current_feelsLike: resp_current.data.data[0].app_temp,
-      current_img: resp_current.data.data[0].weather_icons
-
+      current_img: image
     });
   };
 
-  
   render() {
     return (
       // rendering today's weather.

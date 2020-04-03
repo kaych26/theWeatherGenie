@@ -19,6 +19,7 @@ class WeatherCurrent extends Component {
       current_temp: 0,
       current_feelsLike: "",
       humidity: "",
+      weather_path: "https://www.weatherbit.io/static/img/icons/",
       weather_icon: "",
       is_day: "",
       weather_desc: "",
@@ -33,7 +34,9 @@ class WeatherCurrent extends Component {
     const API = `https://api.weatherbit.io/v2.0/current?city=New York,NY&units=I&key=135c1b8ccc544d6f953f021df2c4b756`;
     const resp = await axios(API);
 
-    debugger;
+    const image =
+      this.state.weather_path + resp.data.data[0].weather.icon + ".png";
+
     this.setState(() => ({
       results: resp.data,
       city_name: resp.data.data[0].city_name,
@@ -41,15 +44,16 @@ class WeatherCurrent extends Component {
       current_temp: resp.data.data[0].temp,
       current_feelsLike: resp.data.data[0].app_temp,
       humidity: resp.data.data[0].rh,
-      weather_icon: resp.data.data[0].weather_icons,
+      weather_icon: image,
       weather_desc: resp.data.data[0].weather.description,
       wind: resp.data.data[0].wind_spd,
       precip: resp.data.data[0].precip,
       is_day: resp.data.data[0].pod
     }));
-  };
+    };
 
   render() {
+    const weather_img = `https://www.weatherbit.io/static/img/icons/${this.state.weather_icon}`;
     return (
       <div>
         <div className="current-outerframe">
@@ -57,8 +61,10 @@ class WeatherCurrent extends Component {
           <div className="current-icontemp">
             <img
               className="current-weather-icon"
+              // src="{weather_img}"
               src={this.state.weather_icon}
             />
+
             <h3 className="current-temp">
               {parseFloat(this.state.current_temp).toFixed()}&deg; F
             </h3>
