@@ -23,12 +23,12 @@ class WeatherCurrent extends Component {
   }
 
   componentDidMount = async () => {
-
     // Parameters used to call the Weatherstack API - today's weather
     const KEY = "1d5857743783fad0dbc744550e4f26df";
     const unit = "f";
 
-    // const API = `http://api.weatherstack.com/current?access_key=${KEY}&query=10010&units=${unit}`;
+    const API = `http://api.weatherstack.com/current?access_key=${KEY}&query=10010&units=${unit}`;
+
     const resp = await axios(API);
 
     this.setState(() => ({
