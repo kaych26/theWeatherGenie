@@ -2,7 +2,6 @@ import React from "react";
 import { Route } from "react-router-dom";
 import WeatherCurrent from "./WeatherCurrent.js";
 import WeatherForecast from "./WeatherForecast.js";
-import "../styles/Main.css";
 
 // Main() is used to route the homepage and the 
 // weather 5 days forcast page.

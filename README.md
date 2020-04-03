@@ -1,5 +1,5 @@
 # p2_open_weather
-Project 2: Getting 5 days weather data
+Project 2: Getting today and 5 days weather data
 
 ---------------------
 HTML
