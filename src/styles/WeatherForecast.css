@@ -7,15 +7,17 @@
 
 .weatherForecast-icontemp {
   display: grid;
-  grid-template-columns: 80px 150px;
-  grid-template-rows: 80px;
-  height: 100px;
+  grid-template-columns: 120px 150px;
+  grid-template-rows: 120px;
+  height: 120px;
+  align-self: center;
 }
 
 .weatherForecast-current-temp {
   font-size: 50px;
   color: #000fff;
   font-weight: bold;
+  place-self: center;
 }
 
 .weatherForecast-city {

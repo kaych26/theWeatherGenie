@@ -72,7 +72,7 @@ class WeatherCurrent extends Component {
 
           <div className="current-temp-frame">
             <h3 className="current-feelsLike">
-              Feels like: {this.state.current_feelsLike} &deg; F
+              Feels like: {parseFloat(this.state.current_feelsLike).toFixed()} &deg; F
             </h3>
             <h3 className="current-humidity">
               Precipitation: {this.state.precip} %

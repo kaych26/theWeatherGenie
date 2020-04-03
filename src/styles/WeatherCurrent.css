@@ -15,9 +15,10 @@
 
 .current-icontemp {
   display: grid;
-  grid-template-columns: 80px 150px;
-  grid-template-rows: 80px;
-  height: 100px;
+  grid-template-columns: 120px 150px;
+  grid-template-rows: 110px;
+  height: 140px;
+  align-self: center;
 }
 
 .current-temp-frame {
@@ -25,12 +26,14 @@
   grid-template-columns: 200px;
   grid-template-rows: 50px 25px 25px 25px;
   height: 100px;
+  place-self: center;
 }
 
 .current-temp {
   justify-self: start;
   font-size: 56px;
   color: #000fff;
+  place-self: center;
 }
 .current-feelsLike {
   font-size: 18px;
