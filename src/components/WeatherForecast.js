@@ -23,17 +23,15 @@ class WeatherForecast extends Component {
     const unit = "imperial";
     const zip = "10010";
     const API = "https://api.openweathermap.org/data/2.5/forecast?id=5128581&units=imperial&appid=f0722d727f4810c1e22014a286bc361e";
-
-    // Parameters used to call the Weatherstack API - today's weather
-    // const KEY_weatherstack = "a34416af42ea074efad5ada5656f6164";
-    const KEY_weatherstack = "1d5857743783fad0dbc744550e4f26df";
-    const unit_weatherstack = "f";
-
-    const API_current = `http://api.weatherstack.com/current?access_key=${KEY_weatherstack}&query=${zip}&units=${unit_weatherstack}`;
-    // const API_current = `https://api.openweathermap.org/data/2.5/forecast?id="5128581"&units=imperial&appid=f0722d727f4810c1e22014a286bc361e`;
-
-    const resp_current = await axios(API_current);
     const resp = await axios(API);
+
+    // Parameters used to call the Weatherbit API - today's weather
+    // Last minute change to use this API because the previous API was using insecure http
+    // and unable to deploy to Netifly.  However, my site lost the weather icon...initially thought
+    // this API has the icons, but not for free account
+    const KEY_weatherbit = "135c1b8ccc544d6f953f021df2c4b756";
+    const API_current = `https://api.weatherbit.io/v2.0/current?city=New York,NY&units=I&key=135c1b8ccc544d6f953f021df2c4b756`;
+    const resp_current = await axios(API_current);
 
     // storing the API result data to this.state
     this.setState({
@@ -41,12 +39,15 @@ class WeatherForecast extends Component {
       weather: resp.data.weather,
       main: resp.data.main,
       current_results: resp_current.data,
-      current_city: resp_current.data.location.name,
-      current_temp: resp_current.data.current.temperature,
-      current_feelsLike: resp_current.data.current.feelslike,
-      current_img: resp_current.data.current.weather_icons[0]
+      current_city: resp_current.data.data[0].city_name,
+      current_temp: resp_current.data.data[0].temp,
+      current_feelsLike: resp_current.data.data[0].app_temp,
+      current_img: resp_current.data.data[0].weather_icons
+
     });
   };
+
+  
   render() {
     return (
       // rendering today's weather.
@@ -60,7 +61,7 @@ class WeatherForecast extends Component {
               src={this.state.current_img}
             />
             <div className="weatherForecast-current-temp">
-              {this.state.current_temp}&deg; F
+              {parseFloat(this.state.current_temp).toFixed()}&deg; F
             </div>
           </div>
         </div>

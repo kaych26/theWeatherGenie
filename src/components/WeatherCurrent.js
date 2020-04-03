@@ -3,6 +3,11 @@ import axios from "axios";
 import "../styles/WeatherCurrent.css";
 
 // WeatherCurrent component will call API and render the current weather data.
+
+// Last minute change to use this API because the previous API was using insecure http
+// and unable to deploy to Netifly.  However, my site lost the weather icon...initially thought
+// this API has the icons, but not for free account
+
 class WeatherCurrent extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +16,7 @@ class WeatherCurrent extends Component {
       results: [],
       city_name: "",
       local_time: "",
-      current_temp: "",
+      current_temp: 0,
       current_feelsLike: "",
       humidity: "",
       weather_icon: "",
@@ -23,26 +28,24 @@ class WeatherCurrent extends Component {
   }
 
   componentDidMount = async () => {
-    // Parameters used to call the Weatherstack API - today's weather
-    const KEY = "1d5857743783fad0dbc744550e4f26df";
-    const unit = "f";
-
-    const API = `http://api.weatherstack.com/current?access_key=${KEY}&query=10010&units=${unit}`;
-
+    // Parameters used to call the Weatherbit API - today's weather
+    const KEY = "135c1b8ccc544d6f953f021df2c4b756";
+    const API = `https://api.weatherbit.io/v2.0/current?city=New York,NY&units=I&key=135c1b8ccc544d6f953f021df2c4b756`;
     const resp = await axios(API);
 
+    debugger;
     this.setState(() => ({
       results: resp.data,
-      city_name: resp.data.location.name,
-      local_time: resp.data.location.localtime,
-      current_temp: resp.data.current.temperature,
-      current_feelsLike: resp.data.current.feelslike,
-      humidity: resp.data.current.humidity,
-      weather_icon: resp.data.current.weather_icons[0],
-      weather_desc: resp.data.current.weather_descriptions[0],
-      is_day: resp.data.current.is_day,
-      wind: resp.data.current.wind_speed,
-      precip: resp.data.current.precip
+      city_name: resp.data.data[0].city_name,
+      local_time: resp.data.data[0].datetime,
+      current_temp: resp.data.data[0].temp,
+      current_feelsLike: resp.data.data[0].app_temp,
+      humidity: resp.data.data[0].rh,
+      weather_icon: resp.data.data[0].weather_icons,
+      weather_desc: resp.data.data[0].weather.description,
+      wind: resp.data.data[0].wind_spd,
+      precip: resp.data.data[0].precip,
+      is_day: resp.data.data[0].pod
     }));
   };
 
@@ -56,7 +59,9 @@ class WeatherCurrent extends Component {
               className="current-weather-icon"
               src={this.state.weather_icon}
             />
-            <h3 className="current-temp">{this.state.current_temp}&deg; F</h3>
+            <h3 className="current-temp">
+              {parseFloat(this.state.current_temp).toFixed()}&deg; F
+            </h3>
           </div>
 
           <div className="current-temp-frame">
@@ -69,7 +74,7 @@ class WeatherCurrent extends Component {
             <h3 className="current-humidity">
               Humidity: {this.state.humidity} %
             </h3>
-            <h3 className="current-humidity">Wind: {this.state.wind} mph</h3>
+            <h3 className="current-wind">Wind: {this.state.wind} mph</h3>
             <h3 className="current-desc">Sky: {this.state.weather_desc}</h3>
           </div>
         </div>
