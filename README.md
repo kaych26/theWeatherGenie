@@ -4,7 +4,7 @@ Project 2: Getting today and 5 days weather data
 ---------------------
 HTML
 ---------------------
-https://awesome-lamport-2f101c.netlify.com/
+https://theweathergenie.netlify.com
 
 ---------------------
  Title:
