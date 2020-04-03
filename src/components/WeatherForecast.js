@@ -22,7 +22,7 @@ class WeatherForecast extends Component {
     const nycId = "5128581";
     const unit = "imperial";
     const zip = "10010";
-    const API = `https://api.openweathermap.org/data/2.5/forecast?id=${nycId}&units=${unit}&appid=${KEY}`;
+    const API = `https://api.openweathermap.org/data/2.5/forecast?id="5128581"&units=imperial&appid=f0722d727f4810c1e22014a286bc361e`;
 
     // Parameters used to call the Weatherstack API - today's weather
     // const KEY_weatherstack = "a34416af42ea074efad5ada5656f6164";
@@ -31,7 +31,7 @@ class WeatherForecast extends Component {
 
     const API_current = `http://api.weatherstack.com/current?access_key=${KEY_weatherstack}&query=${zip}&units=${unit_weatherstack}`;
 
-    const resp_current = await axios(API_current);
+    // const resp_current = await axios(API_current);
     const resp = await axios(API);
 
     // storing the API result data to this.state
