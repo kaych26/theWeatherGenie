@@ -68,4 +68,8 @@
     grid-template-rows: 110px 120px 200px;
     height: 360px;
   }
+  
+  .current-city {
+    font-size: 28px;
+  }
 }
