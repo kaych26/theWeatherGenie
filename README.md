@@ -71,7 +71,14 @@ https://api.openweathermap.org/data/2.5/forecast?id=${nycId}&units=${unit}&appid
 ---------------------
 POST MVP: If time allows, I like to do the following:
 
-1. CSS styling to make the webpage with more professional appearance.
+1. CSS styling to make the webpage with more professional appearance
+   - different background for day / night / sunny / rain / snow /wind
+   - Add more 3D shadows to buttons
+   - Add the weather map
+2. Change the buttons to single toggle button between today and next 5 days weather.
+3. Add the menu list on sidebar to allow user to select different cities and states to get weather.
+4. Able to switch between celieus and fahrenheit.
+3. In the 5 days weather, able to click on it to retrieve more details.
 2. Add counter to track the number of website visiters.
 
 ---------------------

@@ -7,7 +7,7 @@ const year = today[0].split("/");
 
 const FooterLogo = props => (
   <small className={props.name}>
-    Copyright &copy; {year[2]} KayC Inc. All Rights Reserved.
+    Webpage by KayC &copy; {year[2]}
   </small>
 );
 
